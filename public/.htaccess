@@ -1,0 +1,15 @@
+AddDefaultCharset UTF-8
+ErrorDocument 404 /404
+
+# Google sitemap
+#RewriteRule ^sitemap.xml?$	sitemap.php  [L,QSA]
+
+# XML
+#RewriteRule ^yandex.xml?$	yandex.php  [L,QSA]
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule .* index.php [L]
+
+php_flag session.use_only_cookies on

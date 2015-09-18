@@ -1,0 +1,1 @@
+<label>Copyright, 2015</label>

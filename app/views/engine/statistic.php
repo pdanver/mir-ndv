@@ -1,0 +1,1 @@
+<div class="adminList"><table><tr><td><label class="title">Страница статистики</label></td></tr>{NODES}</table></div>

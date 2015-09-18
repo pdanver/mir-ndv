@@ -1,0 +1,105 @@
+@font-face
+{
+    font-family: myFirstFont;
+    src: url(/font/Tr2n.ttf);
+}
+
+canvas
+{
+    z-index: -1;
+    background: #252525;
+}
+
+/* navigation */
+nav
+{
+   position: absolute;
+   top: 10%;
+   text-align: center;
+   width: 300px;
+   /*height: 100%;*/
+}
+.hexagon:nth-child(even)
+{
+   top: 73px;
+   left: 53px;
+}
+.hexagon
+{
+   top: 35px;
+   width: 100px;
+   height: 55px;
+   position: relative;
+}
+.hexagon, .hexagon:before, .hexagon:after
+{
+   -webkit-box-shadow: 0 0 20px rgba(0, 177, 255, 0.80);
+   -moz-box-shadow: 0 0 20px rgba(0, 177, 255, 0.80);
+   -o-box-shadow: 0 0 20px rgba(0, 177, 255, 0.80);
+   box-shadow: 0 0 20px rgba(0, 177, 255, 0.80);
+}
+.hexagon:hover, .hexagon:hover:before, .hexagon:hover:after
+{
+   -webkit-box-shadow: 0 0 20px rgba(0, 255, 0, 0.80);
+   -moz-box-shadow: 0 0 20px rgba(0, 255, 0, 0.80);
+   -o-box-shadow: 0 0 20px rgba(0, 255, 0, 0.80);
+   box-shadow: 0 0 20px rgba(0, 255, 0, 0.80);
+}
+.hexagon:before, .hexagon:after
+{
+   content: "";
+   position: absolute;
+   left: 22px;
+   width: 57px;
+   height: 57px;
+   -moz-transform: rotate(145deg) skew(22.5deg);
+   -webkit-transform: rotate(145deg) skew(22.5deg);
+   transform: rotate(145deg) skew(22.5deg);
+}
+.hexagon:before
+{
+   top: -29px;
+}
+.hexagon:after
+{
+   top: 27px;
+}
+.hexagon span
+{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100px;
+   height: 55px;
+   z-index: 1;
+}
+.logo, .logo:before, .logo:after, .logo span
+{
+   background-color: rgb(97, 100, 136);
+}
+.logo label
+{
+   font-family: myFirstFont;
+   font-size: 500%;
+   color: white;
+   left: 50%;
+   position: absolute;
+   text-shadow: 1px 1px 2px rgb(0, 255, 0), 10px 10px 10px rgb(255, 0, 0);
+}
+.button, .button:before, .button:after, .button span
+{
+   background-color: #762828;
+}
+.button label
+{
+   font-size: 130%;
+   top: 20%;
+   position: relative;
+}
+.button label:hover
+{
+   font-size: 200%;
+}
+
+/*top: 110px;*/
+/*left: 5px;*/

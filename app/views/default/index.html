@@ -1,0 +1,520 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+{META}
+<title>{TITLE}</title>
+<style type="text/css">
+BODY {	FONT-SIZE: 12px;	MARGIN: 2 30 30 30;	FONT-FAMILY: "Arial", "Helvetica", "Geneva", "Swiss", "SunSans-Regular", "sans-serif";	color: black;	background-color:rgb(250,250,250);}
+.topBar{border-bottom: 1px solid #777;}
+.topBar ul li{display: inline;}
+.PLACE3{  float:right;	}
+.PLACE6{  float:right;	}
+.PLACE2{ display:inline-block;}
+.PLACE5{ display:inline-block;}
+.PLACE1{ float:left; }
+.PLACE4{ float:left; }
+.content{}
+.bottomBar{}
+nav {  
+  background-color: lightblue;
+  color: black;
+  /* Menü an absolute Position und über  */
+  /* den Rand nach links verschieben     */
+  position: absolute;
+  width: 9em;
+  left: -6em;
+  /* beim Hover die Bewegung nach rechts */
+  /* machen ... im nav:hover klappt das  */
+  /* nicht                               */
+  transition: left 0.2s;
+}
+nav:hover {
+  left: 0em;
+}
+nav li {
+  list-style: none;
+  padding: 1em;
+}
+/* ********************** Link Style *** */
+nav a {
+  color: black;
+  padding: 0.5em;
+  font-weight: bold;
+  text-decoration: none;
+}
+nav a:hover {
+  color: white;
+  background-color: blue;
+  border-radius: 0.5em;
+}
+
+.altleftmenu{
+position: absolute;
+ left : 10px;
+ top : 10px;
+ bottom : 10px;
+height: 90%;
+background: #EEDFAC none repeat scroll 0% 0%;
+}
+#navigationMenu{    position: fixed;
+    left: -30px;
+    top: 20%;}
+#navigationMenu li{
+	list-style:none;
+	height:39px;
+	padding:2px;
+	width:40px;
+}
+
+#navigationMenu span{
+	/* Container properties */
+	width:0;
+	left:38px;
+	padding:0;
+	position:absolute;
+	overflow:hidden;
+
+	/* Text properties */
+	font-family:'Myriad Pro',Arial, Helvetica, sans-serif;
+	font-size:18px;
+	font-weight:bold;
+	letter-spacing:0.6px;
+	white-space:nowrap;
+	line-height:39px;
+	
+	/* CSS3 Transition: */
+	-webkit-transition: 0.25s;
+	
+	/* Future proofing (these do not work yet): */
+	-moz-transition: 0.25s;
+	transition: 0.25s;
+}
+
+#navigationMenu a{
+	background:url('images/navigation.jpg') no-repeat;
+
+	height:39px;
+	width:38px;
+	display:block;
+	position:relative;
+}
+
+/* General hover styles */
+
+#navigationMenu a:hover span{ width:auto; padding:0 20px;overflow:visible; }
+#navigationMenu a:hover{
+	text-decoration:none;
+	
+	/* CSS outer glow with the box-shadow property */
+	-moz-box-shadow:0 0 5px #9ddff5;
+	-webkit-box-shadow:0 0 5px #9ddff5;
+	box-shadow:0 0 5px #9ddff5;
+}
+
+/* Green Button */
+
+#navigationMenu .home {	background-position:0 0;}
+#navigationMenu .home:hover {	background-position:0 -39px;}
+#navigationMenu .home span{
+	background-color:#7da315;
+	color:#3d4f0c;
+	text-shadow:1px 1px 0 #99bf31;
+}
+
+/* Blue Button */
+
+#navigationMenu .about { background-position:-38px 0;}
+#navigationMenu .about:hover { background-position:-38px -39px;}
+#navigationMenu .about span{
+	background-color:#1e8bb4;
+	color:#223a44;
+	text-shadow:1px 1px 0 #44a8d0;
+}
+
+/* Orange Button */
+
+#navigationMenu .services { background-position:-76px 0;}
+#navigationMenu .services:hover { background-position:-76px -39px;}
+#navigationMenu .services span{
+	background-color:#c86c1f;
+	color:#5a3517;
+	text-shadow:1px 1px 0 #d28344;
+}
+
+/* Yellow Button */
+
+#navigationMenu .portfolio { background-position:-114px 0;}
+#navigationMenu .portfolio:hover{ background-position:-114px -39px;}
+#navigationMenu .portfolio span{
+	background-color:#d0a525;
+	color:#604e18;
+	text-shadow:1px 1px 0 #d8b54b;
+}
+
+/* Purple Button */
+
+#navigationMenu .contact { background-position:-152px 0;}
+#navigationMenu .contact:hover { background-position:-152px -39px;}
+#navigationMenu .contact span{
+	background-color:#af1e83;
+	color:#460f35;
+	text-shadow:1px 1px 0 #d244a6;
+}
+
+/* === List Styles === */
+.contact_form ul {
+    width:750px;
+    list-style-type:none;
+	list-style-position:outside;
+	margin:0px;
+	padding:0px;
+}
+.contact_form li{
+	padding:12px; 
+	border-bottom:1px solid #eee;
+	position:relative;
+} 
+.contact_form li:first-child, .contact_form li:last-child {
+	border-bottom:1px solid #777;
+}
+
+/* === Form Header === */
+.contact_form h2 {
+	margin:0;
+	display: inline;
+}
+.required_notification {
+	color:#d45252; 
+	margin:5px 0 0 0; 
+	display:inline;
+	float:right;
+}
+
+/* === Form Elements === */
+.contact_form label {
+	width:150px;
+	margin-top: 3px;
+	display:inline-block;
+	float:left;
+	padding:3px;
+}
+.contact_form input {
+	height:30px; 
+	width:220px; 
+	padding:5px 8px;
+}
+.contact_form textarea {padding:8px; width:300px;}
+.contact_form button {margin-left:156px;}
+
+	/* form element visual styles */
+	.contact_form input, .contact_form textarea { 
+		border:1px solid #aaa;
+		box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
+		border-radius:2px;
+		padding-right:30px;
+		-moz-transition: padding .25s; 
+		-webkit-transition: padding .25s; 
+		-o-transition: padding .25s;
+		transition: padding .25s;
+	}
+	.contact_form input:focus, .contact_form textarea:focus {
+		background: #fff; 
+		border:1px solid #555; 
+		box-shadow: 0 0 3px #aaa; 
+		padding-right:70px;
+	}
+
+/* === HTML5 validation styles === */	
+.contact_form input:required, .contact_form textarea:required {
+	background: #fff url(images/red_asterisk.png) no-repeat 98% center;
+}
+.contact_form input:required:valid, .contact_form textarea:required:valid {
+	background: #fff url(images/valid.png) no-repeat 98% center;
+	box-shadow: 0 0 5px #5cd053;
+	border-color: #28921f;
+}
+.contact_form input:focus:invalid, .contact_form textarea:focus:invalid {
+	background: #fff url(images/invalid.png) no-repeat 98% center;
+	box-shadow: 0 0 5px #d45252;
+	border-color: #b03535
+}
+
+/* === Form hints === */
+.form_hint {
+	background: #d45252;
+	border-radius: 3px 3px 3px 3px;
+	color: white;
+	margin-left:8px;
+	padding: 1px 6px;
+	z-index: 999; /* hints stay above all other elements */
+	position: absolute; /* allows proper formatting if hint is two lines */
+	display: none;
+}
+.form_hint::before {
+	content: "\25C0";
+	color:#d45252;
+	position: absolute;
+	top:1px;
+	left:-6px;
+}
+.contact_form input:focus + .form_hint {display: inline;}
+.contact_form input:required:valid + .form_hint {background: #28921f;}
+.contact_form input:required:valid + .form_hint::before {color:#28921f;}
+	
+/* === Button Style === */
+/*
+button.submit {
+	background-color: #68b12f;
+	background: -webkit-gradient(linear, left top, left bottom, from(#68b12f), to(#50911e));
+	background: -webkit-linear-gradient(top, #68b12f, #50911e);
+	background: -moz-linear-gradient(top, #68b12f, #50911e);
+	background: -ms-linear-gradient(top, #68b12f, #50911e);
+	background: -o-linear-gradient(top, #68b12f, #50911e);
+	background: linear-gradient(top, #68b12f, #50911e);
+	border: 1px solid #509111;
+	border-bottom: 1px solid #5b992b;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	box-shadow: inset 0 1px 0 0 #9fd574;
+	-webkit-box-shadow: 0 1px 0 0 #9fd574 inset ;
+	-moz-box-shadow: 0 1px 0 0 #9fd574 inset;
+	-ms-box-shadow: 0 1px 0 0 #9fd574 inset;
+	-o-box-shadow: 0 1px 0 0 #9fd574 inset;
+	color: white;
+	font-weight: bold;
+	padding: 6px 20px;
+	text-align: center;
+	text-shadow: 0 -1px 0 #396715;
+}
+
+button.submit:hover {
+	opacity:.85;
+	cursor: pointer; 
+}
+button.submit:active {
+	border: 1px solid #20911e;
+	box-shadow: 0 0 10px 5px #356b0b inset; 
+	-webkit-box-shadow:0 0 10px 5px #356b0b inset ;
+	-moz-box-shadow: 0 0 10px 5px #356b0b inset;
+	-ms-box-shadow: 0 0 10px 5px #356b0b inset;
+	-o-box-shadow: 0 0 10px 5px #356b0b inset;
+	
+}
+*/
+footer {border-top: 1px solid #777;}
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
+ <script src="http://demo2.planetcreativ.de/assets/plugins/jquery-datatable/extensions/ColReorder/js/dataTables.colReorder.js"></script> 
+ {CSS}
+ {JS}
+</head>
+<body>
+<!-- Существующие поэиции
+
+{META}   - Метаданные страницы
+{JS}     - ОЫ
+{CSS}    - Стили
+{TITLE}   - Заголовок страницы
+{CONTENT} - Область контента
+{PLACE1} - Верхнее левое меню
+{PLACE2} - Верхнее среднее меню
+{PLACE3} - Верхнее правое меню
+{PLACE4} - Нижнее левое меню
+{PLACE5} - Нижнее среднее меню
+{PLACE6} - Нижнее правое меню
+
+
+
+ -->
+
+
+	   <div class="topBar">
+	    <div class="PLACE1">{PLACE1}</div>
+	   <div class="PLACE2">{PLACE2}</div>
+	  <div class="PLACE3">{PLACE3}</div>
+  </div>
+  
+    <div class="content"><br>{CONTENT}
+
+<!--<footer class="bottomBar">-->
+	    <!--<div class="PLACE4">-->
+		<!--{PLACE4}-->
+    <!--<H1>PLACE4</H1>-->
+	<!--<p>PLACE4<a href="#">PLACE4</a></p>-->
+	<!--<a href="#">PLACE4</a>-->
+         <!--</div>-->
+	   <!--<div class="PLACE5">{PLACE5}</div>-->
+	  <!--<div class="PLACE6">-->
+	  <!--{PLACE6}-->
+    <!--<H1>PLACE6</H1>-->
+	<!--<p>PLACE6<a href="#">PLACE6</a></p>-->
+	<!--<a href="#">PLACE6</a>-->
+	   <!--</div> -->
+
+<!--</footer>-->
+<!--<ul id="navigationMenu">-->
+    <!--<li>-->
+	    <!--<a class="home" href="#">-->
+            <!--<span>Контакты</span>-->
+        <!--</a>-->
+    <!--</li>-->
+    <!---->
+    <!--<li>-->
+    	<!--<a class="about" href="#">-->
+            <!--<span>О нас</span>-->
+        <!--</a>-->
+    <!--</li>-->
+    <!---->
+    <!--<li>-->
+	     <!--<a class="services" href="#">-->
+            <!--<span>Объекты</span>-->
+         <!--</a>-->
+    <!--</li>-->
+    <!---->
+    <!--<li>-->
+    	<!--<a class="portfolio" href="#">-->
+            <!--<span>Portfolio</span>-->
+        <!--</a>-->
+    <!--</li>-->
+    <!---->
+    <!--<li>-->
+    	<!--<a class="contact" href="#">-->
+            <!--<span>Контакты</span>-->
+        <!--</a>-->
+    <!--</li>-->
+<!--</ul>-->
+    
+
+  
+
+
+
+<script type="text/javascript" >
+
+
+
+$(".topBar").css("height", $(".PLACE1").height()+"px");
+
+$(".altleftmenu").fadeTo(0, 0.8) ;
+
+function visibleMenu (  leftPadind) {
+this.leftPadind = leftPadind || 10 ;
+var widthvar = $(".altleftmenu").width();
+if($('.altleftmenu').is(':visible')){
+//$(".altleftmenu").hide(300);
+widthvar = leftPadind - widthvar;
+$(".altleftmenu").css("left", widthvar+"px");
+}else{
+//$(".altleftmenu").show(300) ;
+$(".altleftmenu").css("left", widthvar+"px");
+}
+
+}
+
+var tit = {
+  "id" : 1,
+  "asset_id" :"2",
+  "parent_id" :"3",
+  "lft" :"lft",
+  "rgt" : "rgt",
+  "level" : "level",
+  "path": "path",
+  "extension": "extension",
+  "title" :"title"
+  };
+
+
+// $('.cjntent').attr("colspan", "2");
+// $('.ListTC2').remove();
+function leftMenuP ( p ,  tili ,  ol ) {
+}
+function leftMenu ( p ,  tili ,  ol ) {
+this.p = p || true ;
+this.tili = tili || 10 ;
+this.ol = ol || [] ;
+var fr = $("TD").is(".ListTC2");
+if(!p || fr){
+$('.ListTC2').remove();
+$('.cjntent').attr("colspan", +1); 
+return true;}
+
+
+
+tili = "<H1>"+tili+"</H1>";
+var ul ="<ul>";
+ol.map(function(indx, element){
+  ul += '<ol><a  href="'+indx+'"  >'+element+'</a></ol>'
+});
+ ul += "</ul>";
+var res = '<TD  class="ListTC2">'+tili+' '+ul+'</TD>';
+$('.cjntent').attr("colspan", -1);
+$('.cjntent').before(res);
+};
+
+
+$(document).ready(function(){
+
+
+$('.altleftmenu').mouseover(function(){
+ // visibleMenu ();
+});
+ 
+// вызовем событие mouseover на элементе foo
+$('.altleftmenu').mouseover(function(){
+// visibleMenu ();
+});
+function Employee ( name, position, salary ) {
+    this.name = name;
+    this.position = position;
+    this.salary = salary;
+
+};
+// leftMenu ( false );
+var tabled = $('#example').DataTable( {
+  // sDom = 'R',
+ //  colReorder = 'list',
+ // dom = 'Rlfrtip',
+ // colReorder = [realtime = TRUE],
+ Dom: 'Rlfrtip',
+// ordering: true,
+stateSave: true,
+ ColReorder: {
+           //    realtime : 1 ,
+
+           dropCallback: function () { alert('Columns reordered'); return true;}
+        },
+    data: [
+        new Employee( "Tiger Nixon",  "$3,120", "Edinburgh" ),
+		new Employee( "Tiger Nixon",  "$3,120", "Edinburgh" ),
+        new Employee( "Garrett Winters",  "$5,300", "Edinburgh" )
+    ],
+    columns: [
+        { data: 'name',
+		title:'Имя'
+		},
+        { data: 'salary' ,
+		title:'salary'},
+        { data: 'position',
+		title:'position' }
+    ]
+	
+	
+} );
+ // var t = tabled.dataTable.ColReorder;
+// var t = 
+new $.fn.dataTable.ColReorder( tabled);
+// var as = t.dataTable.ColReorder.Callback();
+
+});
+/**/
+</script>
+</body>
+</html>

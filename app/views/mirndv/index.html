@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>{TITLE}</title>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+   <link href="css/bootstrap.min.css" rel="stylesheet">
+   <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+   <!--<link href="css/flexslider.css" rel="stylesheet">-->
+   <!--<link href="css/styles.css" rel="stylesheet">-->
+   <!--<link href="css/queries.css" rel="stylesheet">-->
+   <!--<link href="css/animate.css" rel="stylesheet">-->
+   <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>-->
+   <!--<script src="js/waypoints.min.js"></script>-->
+   <!--<script src="js/bootstrap.min.js"></script>-->
+   <!--<script src="js/scripts.js"></script>-->
+   <!--<script src="js/jquery.flexslider.js"></script>-->
+   <!--<script src="js/modernizr.js"></script>-->
+   {CSS}
+   {JS}
+   <style type="text/css">
+      #top_l_menu{
+         position: absolute;top: 5px;left: 10px; z-index: 10000;
+      }
+      #top_c_menu{cursor: pointer;
+         position: absolute;left: 50%;transform: translateX(-50%); z-index: 9999;
+      }
+      #top_r_menu img:hover ,#top_l_menu img:hover{
+         cursor: pointer; margin-top:-5px;
+      }
+      #top_r_menu{
+         position: absolute;top: 5px;right: 10px; z-index: 10000;
+      }
+      #top_dop_menu{cursor: pointer;
+         position: absolute;top: 60px;right: 10px; z-index: 10000;
+      }
+   </style>
+</head>
+<script language="javascript" type="text/javascript">
+   $(document).ready(function() {
+      $("#top_dop_menu").click(function() { $("#top_dop_menu").find('img').each(function(indx, element)
+      {
+         if($(element).css("display") == "block"){$(element).css("display","none")}else{$(element).css("display","block")}
+
+      } );
+      });
+
+      $("#top_c_menu").click(function() { $("#top_c_menu").find('img').each(function(indx, element)
+      {
+         if($(element).css("display") == "block"){$(element).css("display","none")}else{$(element).css("display","block")}
+
+      } );
+      });
+
+
+   });
+</script>
+<body id="top"  style='background: transparent url("/img/hero-bg.jpg") no-repeat scroll center center / cover;'>
+<header id="home">
+   <div id ="top_l_menu" class="login">
+      <img src="img/a_menu_img.png" alt="" id="top_l_menu-btn1">
+      <img src="img/c_menu_img.png" alt="" id="top_l_menu-btn2">
+      <img src="img/i_menu_img.png" alt="" id="top_l_menu-btn3">
+      <img src="img/b_menu_img.png" alt="" id="top_l_menu-btn4">
+   </div>
+   <div id ="top_c_menu" class="login">
+      <img src="img/poisk_inaktiv_img.png" alt="" style="display: block;">
+      <img src="img/poisk_aktiv_img.png" alt="" style="display: none;">
+   </div>
+   <div id ="top_r_menu" class="login">
+      <img src="img/s_menu_img.png" alt="" id="top_r_menu-btn1">
+      <img src="img/h_menu_img.png" alt="" id="top_r_menu-btn2">
+      <img src="img/g_menu_img.png" alt="" id="top_r_menu-btn3">
+      <img src="img/f_menu_img.png" alt="" id="top_r_menu-btn4">
+   </div>
+   <div id ="top_dop_menu" class="login">
+      <img src="img/s_top_boot.png" alt="" style="display: block;">
+      <img src="img/h_top_boot.png" alt="" style="display: none;">
+   </div>
+   {MENU}
+   {LOGIN}
+   {CONTENT}
+   {GARBAGE}
+   <section class="hero" id="hero">
+      <div class="container logout">
+         <!--<div class="row">-->
+         <!--<div class="col-md-12 text-right navicon">-->
+         <!--<a id="nav-toggle" class="nav_slide_button" href="#">-->
+         <!--<span></span>-->
+         <!--</a>-->
+         <!--</div>-->
+         <!--</div>-->
+         <div class="row logout">
+            {LABEL}
+         </div>
+         <!--<img src="img/tamle_img_1f.png" alt="" style="width: 1170px;">-->
+      </div>
+      <div class="container login">
+         <div class="row login" id="container_text">
+            <p>ВСЕГО ОБЪЕКТОВ 2600</p>
+            <p>НОВЫХ ОБЪЕКТОВ 35</p>
+            <p>ВСЕГО КЛИЕНТОВ 125</p>
+            <p>НОВЫХ КЛИЕНТОВ 10</p>
+            <p>ВСЕГО ЗАЯВОК 120</p>
+            <p>НОВЫХ ЗАЯВОК 12</p>
+         </div>
+         <!--<img src="img/tamle_img_1f.png" alt="" style="width: 1170px;">-->
+      </div>
+   </section>
+</body>
+</html>

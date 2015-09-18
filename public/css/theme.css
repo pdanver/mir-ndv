@@ -1,0 +1,507 @@
+/*----------- hint -----------------*/
+#hint {
+    background: #f0ad4e;
+    border-radius: 3px 3px 3px 3px;
+    color: white;
+    margin-left:8px;
+    padding: 1px 6px;
+    z-index: 999; /* hints stay above all other elements */
+    position: absolute; /* allows proper formatting if hint is two lines */
+    display: none;
+}
+/*----------- window-style1 -----------------*/
+.window-style1 {
+    border-radius: 0px;
+}
+.window-style1 .window-cnt {
+    background: #545c73 !important;
+    color: #333333 !important;
+    border-radius: 0px;
+}
+.window-style1 .window-title {
+    background: #50c5ff;
+    color: #fbfbfb;
+    text-transform: uppercase;
+    border-top: 1px solid #b3e6ff;
+    border-right: 1px solid #46b1e6;
+    border-bottom: 1px solid #40a7d8;
+    border-left: 1px solid #81d5ff;
+    border-radius: 0px;
+    padding: 0px 35px 0px 10px;
+    height: 29px;
+    line-height: 29px;
+}
+.window-style1 .window-title .window-title-text {
+    font-family: Arial !important;
+    font-size: 14px !important;
+    width: 100%;
+    margin: 0px;
+    padding-left: 10px;
+}
+.window-style1 .window-title .window-close {
+    background: url(/img/theme/reg-close.png) 9px 9px no-repeat;
+    width: 29px;
+    height: 29px;
+    text-indent: -9000px;
+    overflow: hidden;
+    text-align: left;
+    display: block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    cursor: pointer;
+}
+.window-style1 {
+    width: 282px;
+    margin-left: 10px;
+}
+.window-style1 .login-title {
+    text-align: center;
+    color: #39b9dc;
+    padding: 5px 0px 5px 0px;
+}
+.window-style1 .window-content {
+    padding-left: 20px;
+}
+.window-style1 .form_input.text,
+.window-style1 .form_input.email,
+.window-style1 .form_input.password,
+.window-style1 .form_input.search {
+    border-top: 1px solid #787a7c;
+    border-right: 1px solid #7d8087;
+    border-bottom: 1px solid #cacdd4;
+    border-left: 1px solid #a8acb8;
+    background: url(/img/theme/input-bg1.png) 0px 0px repeat;
+    margin: 0px 0px 10px 0px;
+    padding: 0px 10px 0px 0px;
+    width: 280px;
+}
+.window-style1 .form_input-shell {
+    padding: 5px 24px 5px 8px;
+}
+.window-style1 .form_input-shell input[type="text"],
+.window-style1 .form_input-shell input[type="email"],
+.window-style1 .form_input-shell input[type="password"],
+.window-style1 .form_input-shell input[type="search"] {
+    color: #ffffff;
+    display: block;
+    width: 100%;
+    border: 0px;
+    margin: 0px;
+    background: transparent;
+    font-size: 14px;
+}
+.window-style1 .form_input.email .form_input-shell {
+    background: url(/img/theme/input-ico-a.png) right center no-repeat;
+}
+.window-style1 .form_input.password .form_input-shell {
+    background: url(/img/theme/input-ico-b.png) right center no-repeat;
+}
+.window-style1 .form_input.search .form_input-shell {
+    background: url(/img/theme/input-ico-c.png) right center no-repeat;
+}
+.window-style1 .window-button {
+    display: block;
+    background: #50c5ff;
+    color: #fbfbfb;
+    text-transform: uppercase;
+    border-top: 1px solid #b3e6ff;
+    border-right: 1px solid #46b1e6;
+    border-bottom: 1px solid #40a7d8;
+    border-left: 1px solid #81d5ff;
+    width: 123px;
+    height: 28px;
+    cursor: pointer;
+    font-size: 12px;
+    border-radius: 0px;
+    margin: 0px auto 10px auto;
+    float: none;
+}
+.window-style1 a {
+    color: #39b9dc;
+}
+.window-style1 a:hover, #window-auth a:hover {
+    text-decoration: underline;
+}
+.window-style1 .window-button:active {
+    -webkit-box-shadow: inset 0px 0px 15px 1px rgba(50, 50, 50, 0.45);
+    -moz-box-shadow: inset 0px 0px 15px 1px rgba(50, 50, 50, 0.45);
+    box-shadow: inset 0px 0px 15px 1px rgba(50, 50, 50, 0.45);
+}
+
+/*----------- window-style2 -----------------*/
+.window-style2 .window-cnt {
+
+}
+.window-style2 .window-title {
+    height: 46px;
+    background: #545c73;
+    float: left;
+    color: #ffffff;
+    text-transform: uppercase;
+    border-radius: 0px 23px 23px 0px;
+    position: relative;
+    width: 100%;
+}
+.window-style2 .window-title .window-title-text {
+    font-family: Arial !important;
+    font-size: 23px;
+    line-height: 46px;
+    height: 46px;
+    width: 100%;
+    margin: 0px;
+    padding-left: 10px;
+}
+.window-style2 .window-title .window-close {
+    background: url(/img/theme/setup-close.png) 0px 0px no-repeat;
+    width: 19px;
+    height: 19px;
+    text-indent: -9000px;
+    overflow: hidden;
+    text-align: left;
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 13px;
+    cursor: pointer;
+}
+.window-style2 .window-title .window-minimize {
+    background: url(/img/theme/setup-minimize.png) 0px 0px no-repeat;
+    width: 19px;
+    height: 19px;
+    text-indent: -9000px;
+    overflow: hidden;
+    text-align: left;
+    display: block;
+    position: absolute;
+    right: 44px;
+    top: 13px;
+    cursor: pointer;
+}
+
+/*--- window style 3 ----------*/
+.window-style3 {
+    border-radius: 3px;
+}
+.window-style3 .window-cnt {
+    color: #333333 !important;
+    border-radius: 0px;
+}
+.window-style3.window-shell .window-title div {
+    height: auto;
+}
+.window-style3 .window-title {
+    height: 46px;
+    margin-bottom: 10px !important;
+}
+.window-style3 .window-content {
+    padding: 0px 0px 0px 0px;
+}
+
+.window-style3 .window-title {
+    margin: 5px 0px 30px 0px;
+    background: #545c73 url(/img/theme/zayavka-title.png) left top repeat-x;
+    color: #ffffff;
+    border-radius: 10px;
+    position: relative;
+    padding: 0px 0px 0px 0px;
+    border: 1px solid #000000;
+    min-height: 45px;
+    box-shadow: 1px 2px 11px #c5c5c5;
+}
+
+.window-style3 .window-title .name {
+    font-size: 22px;
+    height: 45px;
+    line-height: 45px;
+    padding: 0px 0px 0px 60px;
+    float: left;
+}
+
+.window-style3 .window-title .window-close,
+.window-style3 .window-title .window-minimize {
+    padding: 0px 10px;
+    float: right;
+    width: auto;
+    right: 0px;
+    background: none;
+    position: relative;
+}
+
+.window-style3 .window-title .window-close a {
+    display: block;
+    width: 25px;
+    height: 45px;
+    background: url(/img/theme/setup-close.png) center center no-repeat;
+}
+.window-style3 .window-title .window-minimize a{
+    display: block;
+    width: 25px;
+    height: 45px;
+    background: url(/img/theme/setup-minimize.png) center center no-repeat;
+}
+
+.window-style3 .window-title .submit {
+    padding: 0px 10px 0px 40px;
+    float: right;
+}
+
+.window-style3 .window-title .submit input[type="submit"] {
+    display: block;
+    width: 30px;
+    height: 45px;
+    background: url(/img/theme/name-search-submit.png) center center no-repeat;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    cursor: pointer;
+    text-indent: -900px;
+    overflow: hidden;
+}
+
+.window-style3 .window-title label {
+    float: right;
+    display: block;
+    height: 45px;
+    line-height: 45px;
+    padding: 0px 10px 0px 20px;
+}
+
+.window-style3 .window-title .insearch-right {
+    overflow: hidden;
+    border-radius: 3px;
+    border: 1px solid #353a46;
+    box-shadow: 1px 1px 1px #808db0;
+    overflow: hidden;
+    background: #525a71 url(/img/theme/insearch-right.png) top right no-repeat;
+    margin: 4px 0px 0px 0px;
+    width: 200px;
+    float: right;
+}
+
+.window-style3 .window-title .insearch-left {
+    background: url(/img/theme/insearch-left.png) top left no-repeat;
+    height: 33px;
+    width: 200px;
+    padding: 0px 10px 0px 10px;
+    float: right;
+}
+
+.window-style3 .window-title .insearch-right input[type="text"] {
+    display: block;
+    width: 100%;
+    height: 33px;
+    line-height: 33px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    background: transparent;
+    color: #ffffff;
+    font-size: 16px;
+    text-align: center;
+}
+
+.window-style3 .insearch-right .list-menu {
+    height: 33px;
+}
+.window-style3 .insearch-right .list-menu .ico {
+    width: 20px;
+}
+.window-style3 .insearch-right .list-menu .ico a {
+    display: block;
+    cursor: pointer;
+    height: 33px;
+    background: url(/img/theme/insearch-menu.png) center center no-repeat;
+}
+.window-style3 .insearch-right .data {
+    text-align: center;
+    font-size: 16px;
+}
+.window-style3 .fr {
+    float: right !important;
+}
+/*------------window style 4--------------*/
+.window-style4 {
+    border-radius: 3px;
+}
+.window-style4 .window-cnt {
+    /*background: #545c73 !important;*/
+    color: #333333 !important;
+    border-radius: 0px;
+}
+.window-style4 .window-title {
+    height: 0px;
+    overfloaw: hidden;
+    display: none;
+}
+.window-style4 .window-content {
+    padding: 0px 0px 0px 0px;
+}
+
+.window-style4 .garbage-title .name {
+    font-size: 22px;
+    height: 45px;
+    line-height: 45px;
+    padding: 0px 0px 0px 60px;
+    float: left;
+}
+
+.window-style4 .garbage-title .minimize-btn,
+.window-style4 .garbage-title .close-btn {
+    background: transparent url("/img/theme/setup-close.png") no-repeat scroll 0px 0px;
+    width: 19px;
+    height: 19px;
+    text-indent: -9000px;
+    overflow: hidden;
+    text-align: left;
+    display: block;
+    position: absolute;
+    right: 5%;
+    top: 13px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.window-style4 .tabs a {
+    display: block;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    height: 46px;
+    background: #545c73;
+    border-right: 2px solid #ffffff;
+    border-top: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    border-radius: 0px 25px 25px 0px;
+    float: left;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    text-align: center;
+}
+
+.window-style4 .tabs a:hover {
+    background: #6CF;
+}
+
+.window-style4 .tabs a:focus {
+    outline: 0;
+}
+
+.window-style4 .tabs #current a {
+    background: #6CF;
+    text-shadow: none;
+    color: #333;
+}
+
+.window-style4 .tabs-content {
+    margin-top: 50px;
+    min-width: 1100px;
+    background: #fff;
+}
+.window-style4 .tab-content {
+    min-width: 1100px;
+}
+
+/*----------- form_input -----------------*/
+.form_input input[type=checkbox] {
+    display: none;
+}
+.form_input .checkbox1 {
+    top: 10px;
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background: url(/img/theme/check1.png) 0px 0px no-repeat;
+    margin: 0px 0px 0px 5px;
+    cursor: pointer;
+}
+.form_input .checkbox1.checked {
+    background: url(/img/theme/check1.png) 0px -13px no-repeat;
+}
+.form_input.checkbox {
+    width: auto;
+    margin-right: 20px;
+    display: inline-block;
+}
+.form_input.valid input {
+    /*background: #fff url(/img/theme/valid.png) no-repeat 98% center;*/
+    box-shadow: 0 0 7px #007700;
+    border-color: #00529B;
+}
+.form_input.invalid input {
+    /*background: #fff url(/img/theme/invalid.png) no-repeat  98% center;*/
+    box-shadow: 0 0 5px red; /*#d45252;*/
+    border-color: #b03535;
+}
+/*----------- window-auth/window-reg/window-city -----------------*/
+#window-auth #window-auth-submit {
+    margin: 0px 10px 10px 0px;
+    display: inline-block;
+    float: left;
+}
+#window-auth #addition-ref {
+    display: inline-block;
+    float: left;
+}
+#window-auth #addition-ref a {
+    font-size: 12px;
+    line-height: 14px;
+}
+.window-auth .window-title .window-title-text {
+    padding-right: 120px;
+}
+#window-city .window-button {
+    margin: 0px auto 10px auto;
+    float: none !important;
+    width: 100px;
+}
+
+#window-city  { overflow: visible; }
+#window-city .window-cnt { overflow: visible; }
+#window-city .window-content { overflow: visible; }
+
+#window-city .geo-value-text {
+    color: white;
+}
+
+.window-style3 .form_input {
+    display: inline-block;
+    width: 230px;
+    margin: 5px;
+}
+
+.window-style3 .form_input input[type="text"],
+.window-style3 .form_input select{
+    display: block;
+    width: 100%;
+    height: 42px;
+    line-height: 42px;
+    margin: 0px;
+    padding: 0px 0px 0px 5px;
+    border: 0px none;
+    background: transparent none repeat scroll 0% 0%;
+    color: #333;
+    font-size: 16px;
+    border: 1px solid #CCC;
+    border-radius: 12px;
+}
+
+.window-style3 .form_input.select select {
+    width: 300px;
+    display: inline-block;
+
+}
+
+.window-style3 .form_input.select .form_input-shell {
+    /*height: 42px;
+    width: 200px;
+    overflow: hidden;
+    background: url(/img/theme/list-menu.png) no-repeat right #ddd;
+    background-position: 0px -10px;*/
+}
+
+.window-style3 .form_input.select .form_input-arrow {
+    background: url(/img/theme/list-menu.png) no-repeat right #ddd;
+    display: inline-block;
+    margin-left: -10px;
+}

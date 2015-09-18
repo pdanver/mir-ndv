@@ -1,0 +1,124 @@
+#login {
+	position: fixed;
+	top: 0px;
+	right: 10px;
+	z-index: 50;
+}
+
+#login-button_auth,
+#login-button_reg,
+#login-button_out {
+	display: inline-block;
+	color:#dbe2e6;
+	font-size: 12px;
+	font-weight: bold;
+	margin: 10px;
+	cursor: pointer;
+	background-color:#5487a1;
+}
+
+#login-button_auth:hover,
+#login-button_reg:hover,
+#login-button_out:hover {
+	text-decoration: underline;
+}
+
+#login-user-text {
+	display: inline-block;
+	color: #dbe2e6;
+	font-size: 12px;
+	font-weight: bold;
+	margin: 10px;
+	background-color:#5487a1;
+}
+
+#login-buttons,#login-user { display: none;
+	background-color:#5487a1;
+}
+
+#login-reg .form_hint {
+	max-width: 140px;
+	display: none;
+}
+
+#login-reg #form_hint-captcha {
+	max-width: 240px;
+}
+
+.dialog_form {display:none;}
+
+.error{
+	padding: 0px;
+	margin:0px;
+	text-align: center;
+}
+#profile_edit-customer label {
+	display: block !important;
+}
+
+/*#profile_edit-customer #FIO .form_input { display: inline-block; }
+#profile_edit-customer #FIO .form_input label { display: block !important; }
+
+#profile_edit-customer .form_input label { display: inline-block !important; width: 150px; }
+
+#profile_edit-customer .form_input-radio-items { display: inline-block; }
+#profile_edit-customer .form_input-radio-items label { display: inline-block !important; width: 50px; }
+#profile_edit-customer .form_input-radio-items input { display: inline-block; width: 50px; }
+
+#profile_edit-customer #user_photo-cnt img { display: inline-block; }
+#profile_edit-customer #user_photo-cnt input { width: auto; }
+#profile_edit-customer #user_photo-preview-cnt { 	overflow: hidden; width: 200px; height: 200px; }
+
+
+
+.profile_edit-phones { display: inline-block; float: left; }
+.profile_edit-phone {display: block; float: left; }
+.profile_edit-phone input {display: inline-block; float: left;}
+.profile_edit-phone div {display: block; cursor: pointer; float: left; line-height: 34px; }
+.profile_edit-add_phone {display: inline-block; }
+.profile_edit-phone_type { display: inline-block; line-height: 34px; height: 34px; float: left;}
+
+#profile_edit-customer .phones { display: inline-block; float: left; }
+#profile_edit-customer .phones label { display: block !important;  }
+#profile_edit-customer .phone {display: block; }
+#profile_edit-customer .phone input {display: inline-block; float: left;}
+#profile_edit-customer .phone div {display: block; cursor: pointer; float: left; line-height: 34px; }
+#profile_edit-customer .add_phone { display: inline-block; color: green; font-size: 25px;}
+#profile_edit-customer .delete_phone { display: inline-block; color: red; font-size: 25px;}
+#profile_edit-customer .phone_type { display: inline-block; line-height: 34px; height: 34px; width: 150px; float: left;}
+
+#profile_edit-customer #change_pwd label { width: 200px; }
+#profile_edit-customer .location select {width: 250px;}*/
+
+#window-profile_edit input[type=file] {
+	/*display: none;*/
+	filter: Alpha(opacity=0); opacity: 0;
+	width: 200px;
+	height: 30px;
+	display: block;
+	position: absolute;
+	left: 0px; top: 0px;
+	display: none;
+}
+#window-profile_edit .form_input.file .form_input-shell {
+	background: #00529B;
+	width: 200px;
+	height: 30px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+#window-profile_edit .form_input.file .form_input-shell:before {
+	content: "Загрузить картинку";
+	width: 100%;
+	display: block;
+	text-align: center;
+	text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.5);
+	color: #FFF;
+	font: bold 12px/30px "Lucida sans",Arial,Helvetica;
+}
+#window-profile_edit .form_input.file .form_input-shell:hover {
+	//background-color: #66CCFF;
+}
+#window-profile_edit .form_input.file .form_input-shell:active {
+	padding-left: 5px;
+}
