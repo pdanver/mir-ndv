@@ -8,7 +8,7 @@
 
 defined("TRUEADMIN") or die('Доступ запрещен');
 
-include_once 'app/Settings.php';
+include_once '../app/Settings.php';
 
 if(Settings::$SHOW_ERRORS)
 {
@@ -36,7 +36,7 @@ class Route
          $file = join(DIRECTORY_SEPARATOR, $file);
 
       $tmp = $_SERVER['DOCUMENT_ROOT'].DIRECTORY_SEPARATOR.$name.DIRECTORY_SEPARATOR;
-		
+
 	  if($file)
       {
          $file[0] = '*';
@@ -160,16 +160,16 @@ class Route
    static function autoLoad($class)
    {
 	   //echo $class;
-      if(file_exists('app/models/'.$class.'.php'))
-         include_once 'app/models/'.$class.'.php';
-      else if(file_exists('app/controllers/'.$class.'.php'))
-         include_once 'app/controllers/'.$class.'.php';
-      else if(file_exists('core/'.$class.'.php'))
-         include_once 'core/'.$class.'.php';
-      else if(file_exists('core/exceptions/'.$class.'.php'))
-         include_once 'core/exceptions/'.$class.'.php';
-	  else if(file_exists('core/helpers/'.$class.'.php'))
-         include_once 'core/helpers/'.$class.'.php';
+      if(file_exists('../app/models/'.$class.'.php'))
+         include_once '../app/models/'.$class.'.php';
+      else if(file_exists('../app/controllers/'.$class.'.php'))
+         include_once '../app/controllers/'.$class.'.php';
+      else if(file_exists('../core/'.$class.'.php'))
+         include_once '../core/'.$class.'.php';
+      else if(file_exists('../core/exceptions/'.$class.'.php'))
+         include_once '../core/exceptions/'.$class.'.php';
+	  else if(file_exists('../core/helpers/'.$class.'.php'))
+         include_once '../core/helpers/'.$class.'.php';
    }
 
     static function start()
